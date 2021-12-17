@@ -1,0 +1,352 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    
+}     
+
+html { 
+    scroll-behavior:smooth;
+    font-family: Arial, Helvetica, sans-serif;
+
+} 
+
+
+/* Dùng chung */
+
+.row {
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.col {
+    float: left;
+    padding-left: 8px;
+    padding-right: 8px;
+    
+}
+
+.col-third {
+    width: 33.333333333333%;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+#header {
+    height: 46px;
+    background-color: #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+#nav  {
+    display: inline-block;
+}  
+
+#nav, .subnav {
+    list-style-type: none;
+}
+
+#nav > li {
+    display: inline-block;
+}
+
+#nav li {
+    
+    position: relative;
+}
+
+#nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+
+#nav li a {
+    
+    text-decoration: none;
+    line-height: 46px;
+    padding: 0 24px;
+    display: block;
+}
+
+#nav li:hover .subnav {
+    display: block;
+}
+
+#nav .subnav li:hover a ,
+#nav > li:hover > a {
+    color: #000;
+    background-color: #ccc  ;
+} 
+
+#nav .subnav {
+    display: none;
+    min-width: 160px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+#nav .subnav a {
+    color: #000;
+    padding: 0 20.5px;
+    line-height: 38px;
+}
+
+#nav .nav-arrow-down {
+    margin-left: 5px;
+    font-size: 14px;
+}
+
+.logo img {
+    width: 100%;
+    margin-top: 46px;
+    padding-top: 20px;
+    padding-right: 16px;
+    padding-left: 16px;
+    padding-bottom: 20px;
+    background:  center  ;
+}
+
+.content-infogroup {
+    width: 800px;
+    padding: 64px 0 ;
+    margin-left:  auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+}
+
+.infogroup-heading {
+    font-size: 50px ;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 30px;
+}
+
+
+.infogroup-sub-heading {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 4px;
+    font-style: italic;
+    font-weight: 500;
+
+}
+
+.member-infogroup-heading {
+    font-size: 50px ;
+    text-align: center;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 30px;
+}
+
+.member-list {
+    margin-top: 24px;
+    margin-bottom: 500px;
+    
+}
+
+.member-name
+{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.member-img {
+    margin-top: 15px;
+    width: 210px;
+    white-space: 30px;
+    border-radius: 20px;
+    height: 254.87px;
+}
+
+.member-img3 {
+    margin-top: 15px;
+    width: 220px;
+    border-radius: 20px;
+    height: 254.87px;
+}
+
+.btn {
+    color: #fff;
+    background-color:slategray;
+    text-decoration: none;
+    padding: 11px 16px;
+    display: inline-block;
+    margin-top: 30px;
+    border: none;
+}
+
+.btn:hover {
+    color: #000;
+    background-color: #ccc;
+    cursor: pointer;
+}
+
+.modal1,
+.modal3,
+.modal2 {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0,0,0,0.3);
+    align-items: center;
+    justify-content: center;   
+    display: none;
+}
+
+
+.modal1.open1,
+.modal2.open2,
+.modal3.open3 {
+    display: flex;
+}
+
+.modal1-container {
+    background-color: #fff;
+    width: 700px;
+    padding-bottom: 10px;
+    max-width: calc(100%-32px);
+    min-height: 100px;
+    position: relative;
+    animation: modalFadeIn ease 1s;
+}
+
+.modal2-container,
+.modal3-container {
+    background-color: #fff;
+    width: 700px;
+    padding-bottom: 10px;
+    max-width: calc(100%-32px);
+    min-height: 200px;
+    position: relative;
+    animation: modalFadeIn ease 1s;
+}
+
+.modal1-header {
+    background-color:#fff;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    color: #fff;
+}
+
+.logomember {
+    margin-top: 20px;
+    height: 150px;
+    width: 600px;
+    
+}
+
+.infogroup-member-heading {
+    font-size: 35px ;
+    text-align: center;
+    font-weight: 1000;
+    letter-spacing: 2px;
+    margin-top: 10px;
+    color: red;
+}
+
+.infogroup-name-heading {
+    font-size: 25px ;
+    text-align: center;
+    font-weight: 700;
+}
+
+.infogroup-nganh-heading {
+    font-size: 25px ;
+    text-align: center;
+    font-weight: 700;
+}
+
+.modal1-close,
+.modal2-close,
+.modal3-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    color:#000;
+    padding: 12px;
+    cursor: pointer;
+    opacity: 0.9;
+}
+
+.modal1-close:hover,
+.modal2-close:hover,
+.modal3-close:hover {
+    opacity: 1;
+    background-color: red;
+}
+
+.modal1-body {
+    padding: 10px;  
+}
+
+
+.contact-info i[class*="ti-"],
+.contact-info2 i[class*="ti-"],
+.contact-info3 i[class*="ti-"]   {
+    width: 30px;
+    display: inline-block;
+}
+
+.contact-info {
+    
+    font-size: 20px;
+    line-height: 1.5;
+    border : solid 2px ;
+    padding-right: 94px;
+    /* background-color: #a5e0da; */
+    background: #70e1f5;  
+    background: -webkit-linear-gradient(to right, #ffd194, #70e1f5);  
+    background: linear-gradient(to right, #ffd194, #70e1f5); 
+}
+
+.contact-info2 {
+    font-size: 20px;
+    line-height: 1.5;
+    border : solid 2px ;
+    padding-right: 257.42px;
+    border-right: 30px solid 2px;
+    background-color: #a5e0da;
+}
+
+
+.contact-info3 {
+    font-size: 20px;
+    line-height: 1.5;
+    border : solid 2px ;
+    padding-right: 243.42px;
+    border-right: 30px solid 2px;
+    background-color: #a5e0da;
+}
+
+
+
+
+/* animation truot xuong cho thong tin ca nhan  */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-140px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
